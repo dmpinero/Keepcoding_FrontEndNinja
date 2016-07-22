@@ -1,10 +1,22 @@
 var gulp = require('gulp'); // Importa gulp de la carpeta node_modules
 var sass = require('gulp-sass'); // Importa gulp-sass
 var notify = require('gulp-notify'); // Notificaciones de escritorio
+var browserSync = require('browser-sync').create();
 
 // Definimos tarea por defecto
 gulp.task("default", function(){
+	// iniciar BrowserSync
+	browserSync.init({
+		server: "./", // levanta servidor web en la carpeta actual
+		browser: "google chrome"
+	});
+
+	// observa cambios en archivos SASS y ejecuta la tarea de compilación
 	gulp.watch("./src/scss/*.scss", ["compile-sass"]); // Observa cambios en SASS , si se producen se ejecuta la tarea compile-sass
+
+	// observa cambios en archivos HTML y recarga el navegador
+	gulp.watch("./*.html").on("change", browserSync.reload);	
+
 });
 
 // Definimos tarea para compiplar SASS
@@ -15,10 +27,6 @@ gulp.task("compile-sass", function(){
 	.pipe(notify({
 		title: "SASS",
 		message: "Compiled!!"
-	}));
+	}))
+	.pipe(browserSync.stream());
 });
-
-// Notificaciones de escritorio
-
-
-
