@@ -5,6 +5,7 @@
   "main": "index.js",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-notify": "^2.2.0",
     "gulp-sass": "^2.3.2"
   },
   "scripts": {
