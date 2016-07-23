@@ -4,7 +4,7 @@ var notify = require('gulp-notify'); // Notificaciones de escritorio
 var browserSync = require('browser-sync').create();
 
 // Definimos tarea por defecto
-gulp.task("default", function(){
+gulp.task("default", ["compile-sass"], function(){
 	// iniciar BrowserSync
 	browserSync.init({
 		server: "./", // levanta servidor web en la carpeta actual

@@ -18,9 +18,15 @@
 			margin-top: 15px;
 			font-weight: bold;
 		}
-		
-		.title {
 
+		.artist,		
+		.title {
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			display: block;
+			height: 16px;
+			padding-right: 20px;
 		}
 	}
 }
