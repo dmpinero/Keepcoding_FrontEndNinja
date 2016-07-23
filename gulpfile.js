@@ -12,10 +12,10 @@ gulp.task("default", function(){
 	});
 
 	// observa cambios en archivos SASS y ejecuta la tarea de compilación
-	gulp.watch("./src/scss/*.scss", ["compile-sass"]); // Observa cambios en SASS , si se producen se ejecuta la tarea compile-sass
+	gulp.watch("src/scss/*.scss", ["compile-sass"]); // Observa cambios en SASS , si se producen se ejecuta la tarea compile-sass
 
 	// observa cambios en archivos HTML y recarga el navegador
-	gulp.watch("./*.html").on("change", browserSync.reload);	
+	gulp.watch("*.html").on("change", browserSync.reload);	
 
 });
 
