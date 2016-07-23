@@ -4,4 +4,13 @@ body {
 	color: $main-text-color;
 	font-family: $main-font-family;
 	font-size: $font-size-base;
+	padding-top: 50px;
+}
+
+// Imágenes, videos y objetos responsive
+img,
+embed,
+video,
+object {
+	max-width: 100%;
 }

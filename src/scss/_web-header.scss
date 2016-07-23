@@ -4,8 +4,12 @@ $web-header-color: $color-white;
 
 // Estilos de la cabecera
 .web-header {
+	position: fixed; // Cabecera fija arriba
+	top: 0px; // Cabecera fija arriba
+	left: 0px; // Cabecera fija arriba
+	background: fade-out($web-header-background, 0.1);
+	width: 100%;
 	padding: 15px 0px;
-	background: $web-header-background;
 	color: $web-header-color;
 	text-align: center;
 	text-transform: uppercase;
