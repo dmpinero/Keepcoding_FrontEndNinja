@@ -5,6 +5,7 @@ $web-header-color: $color-white;
 // Estilos de la cabecera
 .web-header {
 	position: fixed; // Cabecera fija arriba
+	z-index: 99; // Siempre visible
 	top: 0px; // Cabecera fija arriba
 	left: 0px; // Cabecera fija arriba
 	background: fade-out($web-header-background, 0.1);

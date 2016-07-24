@@ -14,3 +14,66 @@ video,
 object {
 	max-width: 100%;
 }
+
+// Formularios
+form {
+	top: 0px;
+	background: $color-white;
+	width: calc(100% - 20px);
+	position: absolute;	
+	padding: 10px;
+	height: 100vh; // Altura del formulario 100% viewport height
+	display: flex;
+	flex-direction: column;
+	justify-content: center;	
+}
+
+label,
+input,
+button {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+label {
+	font-size: $font-size-small;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+input {
+	border: 1px solid $color-sirena;
+	margin: 5px 0px 15px 0px;
+	padding: 10px;
+	font-size: $font-size-base;
+	border-radius: 5px;
+
+	&:focus {
+		outline-color: $color-sirena;
+		background: $color-grey;
+	}
+}
+
+button {
+	@extend input;
+	background: $color-sirena;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: darken($color-sirena, 50%);
+	transition: all 0.25s;
+
+	&:active { // Al pulsar el botón
+		background: darken($color-sirena, 10%);
+		color: $color-white;
+	}
+	
+	&:hover { // Al pasar el ratón por encima. Esto en mobile no tiene sentido, pero sí para escritorio
+		background: darken($color-sirena, 20%);
+		color: $color-white;
+	}	
+}
+
+*::selection { // Selección de elementos con el ratón
+	background: $color-ivory-ish;
+}
