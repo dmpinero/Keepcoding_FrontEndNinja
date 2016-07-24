@@ -1,0 +1,22 @@
+body {
+
+	// Por defecto todos los UI elements (elementos
+	// que tengan la clase ui-element) dentro de body ocultos
+	.ui-element {
+		display: none;
+	}
+
+	// Muestra el formulario
+	// Cuando el body tenga la clase .form-shown
+	// los elementos dentro de body con clase .new-song-form se visualizan con estilo flex
+	&.form-shown .new-song-form { 
+		display: flex;
+	}
+
+	// Muestra el listado de canciones
+	// Cuando el body tenga la clase .songs-list-shown
+	// los elementos dentro de body con clase .songs-list se visualizan con estilo block
+	&.songs-list-shown .songs-list {
+		display: block;
+	}
+}
