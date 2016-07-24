@@ -1,0 +1,15 @@
+// Mixins
+
+// Media query para las tablets
+@mixin if-is-tablet {
+	@media all and (min-width: #{$tablet-width}) {
+		@content;
+	}
+}
+
+// Media query para las móviles
+@mixin if-is-phone {
+	@media all and (max-width: #{$phone-width}) {
+		@content;
+	}
+}

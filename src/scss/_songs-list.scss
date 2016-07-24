@@ -3,15 +3,33 @@
 // Estilos de las canciones
 .songs-list {
 	
+	// Si es una tablet utilizamos Flexbos para mostrar
+	// las canciones con 5 elementos por fila
+	@include if-is-tablet {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
 	.song {
-		
 		@extend .clearfix; // Aplica automáticamente el estilo de clearfix
 		border-bottom: 1px solid $color-grey;
 		
+
+		@include if-is-tablet {
+			width: calc(20% - 20px); // Para que quepan 5 elementos teniendo en cuenta el padding de 10px por cada lado
+			text-align: center;
+			padding: 10px;
+		}
+
 		.cover {
 			width: 60px;
 			float: left;
 			margin-right: 10px;
+
+			@include if-is-tablet {
+				width: 100%;
+				margin-bottom: 10px;
+			}
 		}
 		
 		.artist {
