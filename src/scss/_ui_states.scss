@@ -9,14 +9,22 @@ body {
 	// Muestra el formulario
 	// Cuando el body tenga la clase .form-shown
 	// los elementos dentro de body con clase .new-song-form se visualizan con estilo flex
-	&.form-shown .new-song-form { 
-		display: flex;
+	&.form-shown {
+		.new-song-form { 
+			display: flex;
+		}
+		
+		@include if-is-tablet {
+			.songs-list {
+				display: flex;
+			}
+		}
 	}
 
 	// Muestra el listado de canciones
 	// Cuando el body tenga la clase .songs-list-shown
 	// los elementos dentro de body con clase .songs-list se visualizan con estilo block
 	&.songs-list-shown .songs-list {
-		display: block;
+		display: flex;
 	}
 }

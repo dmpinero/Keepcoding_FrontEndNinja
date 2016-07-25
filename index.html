@@ -8,24 +8,33 @@
 	<!-- Color de los elementos gráficos de Android (botones Home, Back, Barra de estado, etc.-->
 	<meta name="theme-color" content="#8ED7BF">
 </head>
-<body class="songs-list-shown">
+<body class="form-shown">
 	<header class="web-header">
 		<h1 class="web-title">Batmusic</h1>
 	</header>
 
 	<!-- Formulario de alta de canciones -->
-	<form class="ui-element new-song-form" novalidate>
-		<label for="artist">Artist</label>
-		<input type="text" name="artist" id="artist" placeholder="Artist" required="">
+	<form class="ui-element new-song-form" novalidate
+	>
+		<div>
+			<label for="artist">Artist</label>
+			<input type="text" name="artist" id="artist" placeholder="Artist" required>
+		</div>
 
-		<label for="title">Title</label>
-		<input type="text" name="title" id="title" placeholder="Song title" required="">
-		
-		<label for="audio_url">Audio URL</label>
-		<input type="url" id="audio_url" name="audio_url" placeholder="http://..." required>
-		
-		<label for="cover_url">Cover URL</label>
-		<input type="url" id="cover-url" name="cover_url" placeholder="http://...">
+		<div>
+			<label for="title">Title</label>
+			<input type="text" name="title" id="title" placeholder="Song title" required>
+		</div>
+
+		<div>		
+			<label for="audio_url">Audio URL</label>
+			<input type="url" id="audio_url" name="audio_url" placeholder="http://..." required>
+		</div>
+
+		<div>
+			<label for="cover_url">Cover URL</label>
+			<input type="url" id="cover-url" name="cover_url" placeholder="http://...">
+		</div>
 		<button> Save song</button>
 	</form>
 
