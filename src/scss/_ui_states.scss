@@ -10,6 +10,9 @@ body {
 	// Cuando el body tenga la clase .form-shown
 	// los elementos dentro de body con clase .new-song-form se visualizan con estilo flex
 	&.form-shown {
+		.add-icon {
+			transform: rotate(45deg);
+		}
 		.new-song-form { 
 			display: flex;
 		}

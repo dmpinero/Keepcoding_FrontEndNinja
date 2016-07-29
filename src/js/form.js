@@ -1,10 +1,9 @@
 var $ = require('jquery');
 
-//console.log("Me cargo");
+//console.log("form.js");
 
-// Al hacer click en el botón de guardar enviamos una petición Ajax
-// para almacenar la canción
-$('.new-song-form button').on("click", function() {
+// Al hacer enviar formulario pulsando ENTER o hacer click en el botón de guardar enviamos una petición Ajax
+$('.new-song-form').on("submit", function() {
 	//console.log("Click en el botón");
 
 	// Validación del formulario
@@ -14,7 +13,8 @@ $('.new-song-form button').on("click", function() {
 		if (input.checkValidity() == false) {
 			alert(input.validationMessage);
 			input.focus();
-			return false;
+
+			return false; // == preventDefault
 		}
 	}
 
